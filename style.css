@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lobster', cursive;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    background-color: antiquewhite;
+    box-shadow: 0px 0px 56px 1px rgba(17, 16, 16, 0.5);
+    padding: 0px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: 1s linear;
+}
+
+
+/*para modificar el fondo de la imagen*/
+
+header .logo {
+    position: absolute;
+    top: 0;
+    left: 9%;
+    width: 320px;
+    height: 390px;
+    background: #282828;
+    transition: 1s linear;
+}
+
+
+/*modificas el texto de arriba de la imagen*/
+
+header .logo h1 {
+    color: rgb(251, 248, 248);
+    text-align: center;
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+/*para modificar el tamaño de la imagen*/
+
+header .logo img {
+    width: 390px;
+    margin: 20px 0px 0px -30px;
+    filter: drop-shadow(0px 0px 20px rgb( 0, 0, 0, .6));
+}
+
+header nav {
+    width: 100%;
+    height: 10%;
+    /*border: 1px solid rgb(15, 15, 15);*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/*modidicas el texto menu*/
+
+header nav .menu {
+    font-size: 25px;
+    color: black;
+}
+
+header nav .rigt_menu {
+    display: flex;
+    align-items: center;
+}
+
+header nav .rigt_menu ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav .rigt_menu ul li {
+    padding: 3px 10px;
+}
+
+header nav .rigt_menu ul li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    transition: .3s linear;
+}
+
+header nav .rigt_menu ul li a::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: darkred;
+    border-radius: 50%;
+    bottom: -5px;
+    left: 45%;
+    opacity: 0;
+    transition: .3s linear;
+}
+
+header nav .rigt_menu ul li a:hover {
+    color: darkred;
+}
+
+header nav .rigt_menu ul li a:hover::before {
+    opacity: 1;
+}
+
+header nav .rigt_menu .user_cart {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+
+/*para acomodar la imagen del carrito de compras*/
+
+
+/*
+header nav .rigt_menu .user_cart .user {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+
+header nav .rigt_menu .user_cart .user img {
+    width: 100%;
+}
+
+header nav .rigt_menu .user_cart .user::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: darkred;
+    border-radius: 50px;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+}
+*/
+
+header .left_menu {
+    width: 40px;
+    height: 90%;
+    /* border: 1px solid red;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header .left_menu a {
+    margin: 50px 0px;
+    padding: 0px 5px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    font-weight: 600;
+    transition: .3s linear;
+    transform: rotate(-90deg);
+}
+
+header .left_menu a:hover {
+    color: darkred;
+}
+
+header section {
+    width: 50%;
+    height: 50%;
+    /*border: 1px solid green;*/
+}
+
+header section .content {
+    position: relative;
+    left: 550px;
+    margin-top: 10%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    transition: 1s linear;
+}
+
+header section .content h1 {
+    font-size: 70px;
+    transition: 1s linear;
+}
+
+header section .content p {
+    font-size: 15px;
+    font-weight: 600;
+    width: 290px;
+    word-break: break-all;
+}
+
+header section .content .price_order {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+header section .content .price h2 {
+    font-size: 30px;
+    color: crimson;
+    line-height: 15px;
+}
+
+header section .content .price_order .price p {
+    font-size: 19px;
+    width: 100px;
+    /*border: 1px solid #000;*/
+}
+
+header section .content .price_order a {
+    padding: 10px 30px;
+    background-color: rgb(12, 12, 28);
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+
+/*Parte de las Cartas*/
+
+header section .cards {
+    width: 190%;
+    height: 140px;
+    /*border: 1px solid black;*/
+    position: relative;
+    top: 10%;
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+    scroll-behavior: smooth;
+    transition: 1s linear;
+}
+
+header section .cards::-webkit-scrollbar {
+    display: none;
+}
+
+header section .cards .card {
+    position: relative;
+    min-width: 125px;
+    min-height: 125px;
+    border: 1px solid black;
+    margin-left: 13px;
+    background-color: #151414;
+    border-radius: 50px 10px 10px 10px;
+}
+
+header section .cards:nth-last-child(1) {
+    margin-right: 0px;
+}
+
+header section .cards .card .dis {
+    width: 90px;
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+
+header section .cards .card h4 {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+header section .cards .card h5 {
+    color: white;
+    font-size: 18px;
+    font-family: 500;
+    padding: 0px 10px;
+    margin-top: -15px;
+    /*display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;*/
+}
+
+header section .cards .card p {
+    color: rgb(251, 248, 248);
+    font-size: 10px;
+    font-weight: 500;
+    padding: 0px 10px;
+}
+
+header section .cards .card .rate_cart {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 10px;
+    color: aliceblue;
+}
+
+header section .cards .card .rate_cart h6 {
+    font-size: 20px;
+}
+
+header section .cards .card .rate_cart .bi {
+    font-size: 12px;
+}
+
+header section .social {
+    position: relative;
+    width: 180%;
+    /*border: 1px solid black;*/
+    top: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 1s linear;
+}
+
+header section .social .Btns {
+    margin-left: 460px;
+}
+
+header section .social .Btns .bi {
+    font-size: 23px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+header section .social .Btns .bi:hover {
+    color: rgb( 0, 0, 0, .5);
+}
+
+header section .social .icons {
+    display: flex;
+    align-items: center;
+}
+
+header section .social .icons a {
+    font-size: 12px;
+    margin-left: 10px;
+    color: #282828;
+    transition: .3s linear;
+}
+
+header section .social .icons a:hover {
+    color: #151414;
+}
+
+@media screen and (max-width: 1260px) {
+    header {
+        width: 83%;
+    }
+}
+
+@media screen and (max-width: 885px) {
+    header {
+        width: 95%;
+    }
+}
