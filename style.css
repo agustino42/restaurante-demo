@@ -383,3 +383,79 @@ header section .social .icons a:hover {
         width: 95%;
     }
 }
+
+@media screen and (max-width: 775px) {
+    header .logo {
+        left: 13%;
+    }
+    header section .content {
+        left: 340px;
+    }
+    header section {
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    header {
+        width: 100%;
+        height: 100%;
+    }
+    header nav .rigt_menu ul li {
+        padding: 3px 6px;
+    }
+}
+
+@media screen and (max-width: 685px) {
+    header nav .rigt_menu ul {
+        position: absolute;
+        top: 20%;
+        flex-direction: column;
+        width: 15px;
+        right: 17px;
+    }
+    header nav .rigt_menu ul li {
+        padding: 10px 10px;
+        transform: rotate(90deg);
+    }
+    header section .content {
+        left: 20%;
+        top: 20%;
+    }
+    header .logo {
+        left: 30%;
+    }
+    header section .cards {
+        top: 43%;
+    }
+    header section .social {
+        top: 45%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header .logo {
+        left: 20%;
+    }
+    header section .content {
+        left: 11%;
+        top: 38%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header section .content h1 {
+        font-size: 32px;
+    }
+    header section .content p {
+        font-size: 9px;
+        width: 220px;
+    }
+    header .logo {
+        width: 200px;
+    }
+    header .logo img {
+        width: 245px;
+        margin: 75px 0px 0px -30px;
+    }
+}
